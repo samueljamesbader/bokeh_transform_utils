@@ -10,6 +10,8 @@ JSRoundedFloatToStr=lambda dig: CustomJSTransform(args={'dig':dig},
 
 MultiAbsTransform=lambda: CustomJSTransform(v_func="return xs.map(x=>(x.map(Math.abs)));")
 multi_abs_transform=lambda field: transform(field,MultiAbsTransform())
+AbsTransform=lambda: CustomJSTransform(v_func="return xs.map(Math.abs);")
+abs_transform=lambda field: transform(field,AbsTransform())
 
 JSGroupFilter=lambda field,group: CustomJSFilter(args={'field':field,'group':group},
      code="if(!(field in source.data)) {console.error('Trying to filter on non-existent field: '+field); return [];}" \
