@@ -16,7 +16,7 @@ classifiers =[
 
 [options]
 install_requires = [
-    "bokeh >= 3.2.0",
+    "bokeh >= 3.4.0",
 ]
 
 [tool.setuptools.packages.find]
